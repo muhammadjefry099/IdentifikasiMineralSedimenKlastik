@@ -2,7 +2,12 @@
 import streamlit as st
 from PIL import Image
 import numpy as np
-from ultralytics import YOLO
+try:
+    from ultralytics import YOLO
+except ImportError:
+    import os
+    os.system("pip install ultralytics -q")
+    from ultralytics import YOLO
 import os
 import base64 # Import base64 for embedding image in HTML
 
