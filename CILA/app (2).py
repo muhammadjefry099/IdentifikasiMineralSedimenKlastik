@@ -1,5 +1,6 @@
-import os
-os.system('pip install ultralytics')
+
+import os, sys
+os.system(f"{sys.executable} -m pip install ultralytics")
 
 import streamlit as st
 from PIL import Image
